@@ -1,0 +1,22 @@
+{
+  "files": {
+    "app.css": "/static/css/app.css",
+    "app.js": "/static/js/app.js",
+    "background.js": "/static/js/background.js",
+    "content.js": "/static/js/content.js",
+    "loadedBackground.js": "/static/js/loadedBackground.js",
+    "loadedContent.css": "/static/css/loadedContent.css",
+    "loadedContent.js": "/static/js/loadedContent.js",
+    "index.html": "/index.html",
+    "precache-manifest.32a627fe83923166d3448796a6d53fae.js": "/precache-manifest.32a627fe83923166d3448796a6d53fae.js",
+    "service-worker.js": "/service-worker.js",
+    "static/js/background.js.LICENSE": "/static/js/background.js.LICENSE",
+    "static/js/content.js.LICENSE": "/static/js/content.js.LICENSE",
+    "static/js/loadedBackground.js.LICENSE": "/static/js/loadedBackground.js.LICENSE",
+    "static/js/loadedContent.js.LICENSE": "/static/js/loadedContent.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/css/app.css",
+    "static/js/app.js"
+  ]
+}

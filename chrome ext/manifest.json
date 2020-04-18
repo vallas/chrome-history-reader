@@ -1,0 +1,56 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Motion - Prevent Distractions While Working",
+  "short_name": "Motion",
+  "version": "1.0.36",
+  "description": "Real-time interventions to prevent you from getting distracted online.",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_icon": {
+      "16": "images/favicon16.png",
+      "48": "images/favicon48.png",
+      "128": "images/favicon128.png"
+    }
+  },
+  "icons": {
+    "16": "images/favicon16.png",
+    "48": "images/favicon48.png",
+    "128": "images/favicon128.png"
+  },
+  "background": {
+    "scripts": [
+      "/static/js/background.js"
+    ]
+  },
+  "permissions": [
+    "tabs",
+    "storage",
+    "unlimitedStorage",
+    "*://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "/static/js/content.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    "/images/logo_1024.png",
+    "/images/logo_1024_transparent.png"
+  ],
+  "oauth2": {
+    "client_id": "808943271132-6a9iscmg4c557u750j2nist8h84mdq7v.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email",
+      "https://www.googleapis.com/auth/userinfo.profile"
+    ]
+  },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAg7Eo5YxsV4vrZIqn+rKbnir5yslb9WCFSzaExptNeBXmuw3rCwnxAXgAVvzShYfysaLjdJBa1UoVKL1nnte93EGVdW9wkowm5pDjBfRvMX9UkQ5LqiUoRp3KjFwpk2c5jEFAfYcTqORi8xvf5PGiHkZc8eDZKKa7r+pbWD57MgHsp4dUWD5FRaG2k/+W6dg12dSsn0lrkNyfEdrnv1o9uraYEdmCs2p5D9y/EYQiDaQSRDZmMoZBU+OMQzhXj/6st6YZQ0oRInA2Y7mjH2F1bYeCadjvIP44caSYSKHZQMUhIZlVOurL/CUK3tFDcewSN72DCRVPFtfBApfMbsQSPwIDAQAB",
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com https://apis.google.com; object-src 'self'"
+}
